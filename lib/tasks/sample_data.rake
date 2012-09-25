@@ -1,6 +1,7 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
+    
     make_users
     make_microposts
     make_relationships
@@ -22,6 +23,7 @@ def make_users
                    password: password,
                    password_confirmation: password)
     end
+    # User.all.each { |user| user.avatar = File.open(Dir.glob(File.join(Rails.root, 'images', '*')).sample); user.save! }
  end
  def make_microposts
     users = User.all(limit: 6)
