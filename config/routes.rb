@@ -18,6 +18,7 @@ Gupshup::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   # get "static_pages/contact"
   match '/contact', to: 'static_pages#contact'
+  match '/news', to: 'static_pages#news'
   # get "users/new"
   match '/signup', to: 'users#new'
   match '/signin',  to: 'sessions#new'
