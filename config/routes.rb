@@ -20,7 +20,7 @@ Gupshup::Application.routes.draw do
   match '/contact', to: 'static_pages#contact'
   match '/news', to: 'static_pages#news'
   match '/blog', to: 'static_pages#blog'
-  match '/service', to: 'static_pages#service'
+ 
   # get "users/new"
   match '/signup', to: 'users#new'
   match '/signin',  to: 'sessions#new'

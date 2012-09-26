@@ -22,6 +22,5 @@ class StaticPagesController < ApplicationController
   def blog
   end
   
-  def service
-  end
+  
 end
