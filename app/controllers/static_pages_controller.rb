@@ -20,6 +20,8 @@ class StaticPagesController < ApplicationController
   end
   
   def blog
-    
+  end
+  
+  def service
   end
 end
