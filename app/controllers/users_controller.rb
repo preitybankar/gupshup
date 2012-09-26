@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
 
-  before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin_user,     only: :destroy
+  before_filter :correct_user,   only: [:edit, :update, :destroy]
+  #before_filter :admin_user,     only: :destroy
 
   def new
     @user = User.new
@@ -62,6 +62,14 @@ class UsersController < ApplicationController
     flash[:success] = "User deleted."
     redirect_to users_url
   end
+  
+  def delete_account
+    user = current_user.destroy
+    flash[:success] = "User deleted."
+    redirect_to users_url
+  end
+  
+  
 
   private
 
@@ -80,6 +88,7 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_path) unless current_user.admin?
     end
-
+    
+    
 
 end

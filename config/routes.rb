@@ -7,7 +7,7 @@ Gupshup::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-
+ 
   #get "static_pages/home"
   #match '/', to: 'static_pages#home'
   #root to: 'static_pages#home'
@@ -19,12 +19,12 @@ Gupshup::Application.routes.draw do
   # get "static_pages/contact"
   match '/contact', to: 'static_pages#contact'
   match '/news', to: 'static_pages#news'
- 
- 
+   
   # get "users/new"
   match '/signup', to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+  match '/delete_account', to: 'users#delete_account'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
