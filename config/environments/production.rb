@@ -64,4 +64,21 @@ Gupshup::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.perform_deliveries = true
+  
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => "www.gmail.com",
+    :user_name => "preity.bankar@gmail.com",
+    :password => "awedxzs12345",
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+
+  config.action_mailer.default_url_options = {
+    :host => "http://localhost:3000"
+  }
 end
