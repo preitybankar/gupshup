@@ -65,7 +65,7 @@ Gupshup::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.default_url_options = { :host => "http://gappagoshti.herokuapp.com" }
   config.perform_deliveries = true
   
   config.action_mailer.smtp_settings = {
@@ -79,6 +79,6 @@ Gupshup::Application.configure do
   }
 
   config.action_mailer.default_url_options = {
-    :host => "http://localhost:3000"
+    :host => "http://gappagoshti.herokuapp.com"
   }
 end
