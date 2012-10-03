@@ -1,4 +1,17 @@
 <% provide(:title, 'Contact Us') %>
 
+<h1>Contact Us</h1>
+    
+<%= form_for :contact, :url =>{:action => :contact, :controller => "static_pages"} do |f| %>
+    <p> <%= f.label :name %> </p>
+    <p> <%= f.text_field :name%> </p>
 
-    <h1>Contact Us</h1>
+    <p> <%= f.label :email %> </p>
+    <p> <%= f.text_field :email%> </p>
+
+    <p> <%= f.label :message %> </p>
+    <p> <%= f.text_area :message %> </p>
+
+    <p> <%= f.submit %> </p>
+
+<% end %>

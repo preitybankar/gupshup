@@ -10,6 +10,8 @@ gem 'bootstrap-will_paginate', '0.0.6'
 #gem "tabs_on_rails"
 gem 'rmagick'
 gem 'carrierwave'
+gem 'contact_us', '~> 0.4.0.beta'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
