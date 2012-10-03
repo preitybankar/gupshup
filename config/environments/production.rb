@@ -63,7 +63,7 @@ Gupshup::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => "http://gappagoshti.herokuapp.com" }
   config.perform_deliveries = true
   
@@ -72,7 +72,7 @@ Gupshup::Application.configure do
     :port => 587,
     :domain => "www.gmail.com",
     :user_name => "preity.bankar@gmail.com",
-    :password => "awedxzs12345",
+    :password => "qweasdzxc12345",
     :authentication => :plain,
     :enable_starttls_auto => true
   }

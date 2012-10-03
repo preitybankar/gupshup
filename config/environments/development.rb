@@ -35,7 +35,7 @@ Gupshup::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  #config.action_mailer.default_url_options = { :host => "localhost:3000" }
   config.perform_deliveries = true
   
   config.action_mailer.smtp_settings = {
@@ -43,7 +43,7 @@ Gupshup::Application.configure do
     :port => 587,
     :domain => "www.gmail.com",
     :user_name => "preity.bankar@gmail.com",
-    :password => "awedxzs12345",
+    :password => "qweasdzxc12345",
     :authentication => :plain,
     :enable_starttls_auto => true
   }
