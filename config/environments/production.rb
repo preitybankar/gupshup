@@ -72,7 +72,7 @@ Gupshup::Application.configure do
     :port => 587,
     :domain => "www.gmail.com",
     :user_name => "preity.bankar@gmail.com",
-    :password => "qweasdzxc12345",
+    :password => "qazwsxedc12345",
     :authentication => :plain,
     :enable_starttls_auto => true
   }
