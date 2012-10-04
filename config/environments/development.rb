@@ -1,5 +1,5 @@
 Gupshup::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb
+   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -10,12 +10,21 @@ Gupshup::Application.configure do
   config.whiny_nils = true
 
   # Show full error reports and disable caching
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
-
+  config.perform_deliveries = true
+  # Other config items omitted.
+  #config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.delivery_method = :sendmail
+  # config.action_mailer.sendmail_settings = {
+    # location: '/usr/sbin/sendmail',
+    # arguments: "-i -t -f contact@friendsconnect.com"
+  # }
+  
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
@@ -35,15 +44,12 @@ Gupshup::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  #config.action_mailer.default_url_options = { :host => "localhost:3000" }
-  config.perform_deliveries = true
-  
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => "www.gmail.com",
-    :user_name => "preity.bankar@gmail.com",
-    :password => "priti12345",
+    :user_name => "anupbhakrya@gmail.com",
+    :password => "anup123456",
     :authentication => :plain,
     :enable_starttls_auto => true
   }

@@ -5,7 +5,7 @@ Gupshup::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
@@ -19,7 +19,11 @@ Gupshup::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
-
+  
+   # Other config items omitted.
+  
+  config.action_mailer.default_url_options = { :host => "http://friendsconnect.herokuapp.com" }
+  config.perform_deliveries=true
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
@@ -50,6 +54,7 @@ Gupshup::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   config.action_mailer.raise_delivery_errors = false
+
   # Enable threaded mode
   # config.threadsafe!
 
@@ -63,21 +68,19 @@ Gupshup::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => "http://gappagoshti.herokuapp.com" }
-  config.perform_deliveries = true
+
   
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => "www.gmail.com",
-    :user_name => "preity.bankar@gmail.com",
-    :password => "priti12345",
+    :user_name => "anupbhakrya@gmail.com",
+    :password => "anup123456",
     :authentication => :plain,
     :enable_starttls_auto => true
   }
 
   config.action_mailer.default_url_options = {
-    :host => "http://gappagoshti.herokuapp.com"
+    :host => "http://friendsconnect.herokuapp.com"
   }
 end
