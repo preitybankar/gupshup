@@ -22,7 +22,7 @@ Gupshup::Application.configure do
   
    # Other config items omitted.
   
-  config.action_mailer.default_url_options = { :host => "http://friendsconnect.herokuapp.com" }
+  config.action_mailer.default_url_options = { :host => "https://gappagoshti.herokuapp.com" }
   config.perform_deliveries=true
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -81,6 +81,6 @@ Gupshup::Application.configure do
   }
 
   config.action_mailer.default_url_options = {
-    :host => "http://friendsconnect.herokuapp.com"
+    :host => "https://gappagoshti.herokuapp.com"
   }
 end

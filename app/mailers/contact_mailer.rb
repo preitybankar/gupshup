@@ -13,7 +13,7 @@ class ContactMailer < ActionMailer::Base
   # end
   
   default :from => "no-reply@gmail.com"
-  default :to => "preity.bankar@gmail.com"
+  default :to => "anupbhakrya@gmail.com"
 
   def new_contact(contact)
     @contact = contact
