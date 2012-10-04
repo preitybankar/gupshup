@@ -70,6 +70,13 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
   
+    def add_friend  
+         
+    end  
+       
+    def remove_friend  
+          
+    end  
   
 
   private

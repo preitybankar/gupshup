@@ -6,6 +6,8 @@ Gupshup::Application.routes.draw do
       get :following, :followers
     end
   end
+  
+  resources :friendships 
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
@@ -28,6 +30,6 @@ Gupshup::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/delete_account', to: 'users#delete_account'
-
+  
   
 end

@@ -64,7 +64,12 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   # validates :password, presence: true, length: { minimum: 6 }
   # validates :password_confirmation, presence: true
-
+  
+   has_many :friendships  
+   has_many :friends, :through => :friendships 
+   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"  
+   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
+  
   private
 
     def create_remember_token
